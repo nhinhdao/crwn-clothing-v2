@@ -64,12 +64,13 @@ const SignInForm = () => {
   return (
     <div className='sign-in-container'>
       <h2>Already have an account?</h2>
-      <span>Sign in with your email and password</span>
+      <span>Sign in</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           label='Email'
           type='email'
           required
+          placeholer="Email"
           onChange={handleChange}
           name='email'
           value={email}
@@ -79,6 +80,7 @@ const SignInForm = () => {
           label='Password'
           type='password'
           required
+          placeholer="Password"
           onChange={handleChange}
           name='password'
           value={password}
@@ -88,8 +90,7 @@ const SignInForm = () => {
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
             type='button'
-            onClick={signInWithGoogle}
-          >
+            onClick={signInWithGoogle}>
             Sign In With Google
           </Button>
         </div>
